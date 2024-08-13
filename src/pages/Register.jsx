@@ -30,7 +30,6 @@ const Register = () => {
     formData.append('userFile', userFile);
     formData.append('companyId', companyId);
 
-    // Assuming userProfile is generated automatically based on userFile
     formData.append('userProfile', userFile ? `/${userFile.name}` : '');
 
     try {
@@ -47,7 +46,7 @@ const Register = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold mb-4 text-center">Register</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Create Users</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
