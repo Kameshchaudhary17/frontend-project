@@ -23,7 +23,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/messages"
+                to="/message"
                 className="text-white hover:text-blue-200 transition duration-300"
               >
                 User Messages
