@@ -47,7 +47,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/settings"
+                to="/setting"
                 className="text-white hover:text-blue-200 transition duration-300"
               >
                 Web Settings
