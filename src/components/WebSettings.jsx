@@ -17,7 +17,6 @@ const WebSettings = () => {
     e.preventDefault();
     // Handle form submission
     console.log(formData);
-    // You would typically send this data to your API here
   };
 
   return (
