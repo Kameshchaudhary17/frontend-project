@@ -12,6 +12,7 @@ import CompanyInfo from './components/CompanyInfo';
 import WebSettings from './components/WebSettings';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/heading" element={<WebHeading />} />
           <Route path="/info" element={<CompanyInfo />} />
           <Route path="/setting" element={<WebSettings />} />
+          <Route path="/login" element={<Login />} />
           
 
         </Routes>

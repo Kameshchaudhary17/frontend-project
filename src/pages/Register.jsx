@@ -102,8 +102,8 @@ const Register = () => {
           className="w-full border border-gray-300 rounded-lg p-2"
         >
           <option value="Admin">Admin</option>
-          <option value="User">User</option>
-          <option value="Manager">Manager</option>
+          <option value="Super Admin">Super Admin</option>
+          <option value="Editor">Editor</option>
         </select>
         <input
           type="file"

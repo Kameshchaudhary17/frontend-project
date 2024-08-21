@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -67,9 +68,10 @@ const LandingPage = () => {
         <section id="contact" className="text-center mb-12">
           <h3 className="text-3xl font-bold mb-6">Get in Touch</h3>
           <p className="text-lg text-gray-700">Have any questions? We'd love to hear from you.</p>
+          <Link to = '/message'>
           <button className="mt-6 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
             Contact Us
-          </button>
+          </button></Link>
         </section>
       </main>
 
