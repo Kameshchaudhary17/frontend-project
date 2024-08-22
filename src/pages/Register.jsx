@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const Register = () => {
   const [userName, setUserName] = useState('');
@@ -12,7 +11,7 @@ const Register = () => {
   const [userFile, setUserFile] = useState(null);
   const [companyId, setCompanyId] = useState(2);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     if (userPassword !== confirmPassword) {
@@ -20,28 +19,21 @@ const Register = () => {
       return;
     }
 
-    const formData = new FormData();
-    formData.append('userName', userName);
-    formData.append('userPassword', userPassword);
-    formData.append('emailAddress', emailAddress);
-    formData.append('userAddress', userAddress);
-    formData.append('userPhone', userPhone);
-    formData.append('userRole', userRole);
-    formData.append('userFile', userFile);
-    formData.append('companyId', companyId);
+    const userProfile = userFile ? `/${userFile.name}` : '';
 
-    formData.append('userProfile', userFile ? `/${userFile.name}` : '');
+    const userData = {
+      userName,
+      userPassword,
+      emailAddress,
+      userAddress,
+      userPhone,
+      userRole,
+      userProfile,
+      companyId,
+    };
 
-    try {
-      const response = await axios.post('http://localhost:5555/register', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
-      console.log('Registration successful', response.data);
-    } catch (error) {
-      console.error('Error during registration', error);
-    }
+    localStorage.setItem('userData', JSON.stringify(userData));
+    console.log('User data saved in localStorage:', userData);
   };
 
   return (
